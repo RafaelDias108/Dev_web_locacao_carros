@@ -1,0 +1,33 @@
+{% extends 'main/layout/base.html' %} {% block content %}
+
+<h1>Lista de Carros</h1>
+<table class="table border table-hover">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Modelo</th>
+            <th scope="col">Marca</th>
+            <th scope="col">Categoria</th>
+            <th scope="col">Cor</th>
+            <th scope="col">Portas</th>
+            <th scope="col">Combustível</th>
+            <th scope="col">Valor</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for automovel in automoveis %}
+        <tr>
+            <th scope="row">{{automovel.id}}</th>
+            <td>{{automovel.modelo}}</td>
+            <td>{{automovel.marca}}</td>
+            <td>{{automovel.categoria}}</td>
+            <td>{{automovel.cor}}</td>
+            <td>{{automovel.numero_portas}}</td>
+            <td>{{automovel.tipo_combustivel}}</td>
+            <td>R${{automovel.valor_locacao}}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}

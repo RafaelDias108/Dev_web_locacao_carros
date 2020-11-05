@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% include 'main/layout/header.html' %}
+</head>
+
+<body>
+    {% include 'main/layout/navbar.html' %}
+    <main role="main">
+        <div class="container">
+            {% block content %} {% endblock content %}
+
+        </div>
+    </main>
+    {% include 'main/layout/footer.html' %}
+
+
+</body>
+
+</html>
